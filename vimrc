@@ -4,6 +4,23 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" Enhance command-line completion
+set wildmenu
+" Allow cursor keys in insert mode
+set esckeys
+
+" Highlight current line
+" set cursorline
+
+" Enable mouse cursor
+set mouse=a
+
+" Optimize for fast terminal connections
+set ttyfast
+
+" Encoding
+set encoding=utf-8 nobomb
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -27,6 +44,8 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
   set hlsearch
 endif
+
+au BufNewFile,BufRead *.less set filetype=less
 
 " Switch wrap off for everything
 set nowrap

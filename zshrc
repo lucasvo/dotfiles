@@ -6,7 +6,7 @@ DISABLE_LS_COLORS="true"
 export PYTHONSTARTUP=$HOME/.dotfiles/pythonstartup.py
 export PYTHONPATH=$PYTHONPATH:/Library/Python/2.7/site-packages
 
-plugins=(git bundler brew gem rbates)
+plugins=(git bundler brew gem rbates django osx pip)
 
 export PATH="/usr/local/bin:$PATH"
 
