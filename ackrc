@@ -1,0 +1,64 @@
+# only search with case sensitivity if there is mixed case
+--smart-case
+# follow symlinks
+--follow
+
+# Use Less to browse results
+#--pager=less
+
+# Add filters for file types
+# Javascript
+--type-set
+js=.js
+
+# CoffeeScript
+--type-set
+coffee=.coffee
+
+# Both Javascript and CoffeeScript
+--type-set
+scripts=.js,.coffee
+
+# CSS
+--type-set
+css=.css
+
+# Sass, both syntaxes
+--type-set
+sass=.scss,.sass
+
+# LESS
+--type-set
+less=.less
+
+# All types of stylesheets
+--type-set
+styles=.css,.less,.sass,.scss
+
+# Assets
+--type-set
+assets=.css,.less,.sass,.scss,.js,.coffee
+
+--type-add
+objc=.pch
+
+--type-set
+xcode=.pbxproj,.pbxuser,.perspectivev3
+
+--type-set
+ragel=.rl
+
+--type-set
+nib=.xib
+
+--type-set
+plist=.plist
+
+--type-set
+tmstuff=.tmproj,.tm_build_errors
+
+--nonib
+--notmstuff
+--noxcode
+--type-add=java=.groovy,.java,.gsp
+
