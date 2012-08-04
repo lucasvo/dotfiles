@@ -50,4 +50,4 @@ auto_activate
 alias autoactivate="auto_activate"
 
 
-alias pipr="pip install -r requirements.txt"
+alias pipr="pip install -r requirements.txt --update"
