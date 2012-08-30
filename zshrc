@@ -8,7 +8,7 @@ DISABLE_LS_COLORS="true"
 
 plugins=(git bundler brew gem rbates django osx pip)
 
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/opt/local/bin:$PATH"
 export DYLD_LIBRARY_PATH=:/usr/local/mysql-5.5.15-osx10.6-x86_64/lib
 
 source $ZSH/oh-my-zsh.sh
@@ -48,6 +48,10 @@ setopt nomatch
 auto_activate
 
 alias autoactivate="auto_activate"
+alias aa="autoactivate"
 
+alias gc="git commit -m"
 
-alias pipr="pip install -r requirements.txt --update"
+alias fact="elinks -dump http://randomfunfacts.com  | sed -n '/^| /p' | tr -d \|"
+
+alias pipr="pip install -r requirements.txt --upgrade"
