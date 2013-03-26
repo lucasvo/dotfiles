@@ -1,5 +1,21 @@
 " based on http://github.com/jferris/config_files/blob/master/vimrc
 
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/syntastic'
+Bundle 'Lokaltog/powerline'
+Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
+
+"Bundle 'Valloric/YouCompleteMe' 
+filetype plugin indent on     " required!
+
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -106,9 +122,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-" Always display the status line
-set laststatus=2
-
 " \ is the leader character
 let mapleader = ","
 
@@ -187,3 +200,27 @@ set complete=.,t
 " case only matters with mixed case expressions
 set ignorecase
 set smartcase
+
+
+" syntastic
+filetype plugin indent on     " required! 
+
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=0
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_enable_balloons = 1
+
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set laststatus=2
+set t_Co=256
+"let g:powerline_config_path = '/home/lucasvo/.dotfiles/powerline/'
+let g:Powerline_symbols = 'fancy'
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
