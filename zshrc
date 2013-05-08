@@ -8,7 +8,7 @@ DISABLE_LS_COLORS="true"
 
 plugins=(git github bundler brew gem rbates django osx pip cake)
 
-export PATH="/usr/local/bin:/opt/local/bin:$PATH"
+export PATH="/Users/lucasvo/anaconda/bin:/usr/local/bin:/opt/local/bin:$PATH"
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 source $ZSH/oh-my-zsh.sh
@@ -47,7 +47,6 @@ setopt nomatch
 
 }
 
-auto_activate
 
 alias tmux="TERM=xterm-256color tmux"
 alias ack="ack-5.12" 
