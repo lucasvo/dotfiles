@@ -8,10 +8,16 @@ DISABLE_LS_COLORS="true"
 
 plugins=(git github bundler brew gem rbates django osx pip cake)
 
-export PATH="/Users/lucasvo/anaconda/bin:/usr/local/bin:/opt/local/bin:$PATH"
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+export PATH="/usr/local/bin:$PATH"
+
+# added by Anaconda 1.6.1 installer
+export PATH="/Users/lucasvo/anaconda/bin:$PATH"
+
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:/opt/local/lib:/usr/local/Cellar/openssl/1.0.1e/lib:$DYLD_LIBRARY_PATH
 
 source $ZSH/oh-my-zsh.sh
+
+source /Library/PostgreSQL/9.2/pg_env.sh
 
 # for Homebrew installed rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -49,8 +55,6 @@ setopt nomatch
 
 
 alias tmux="TERM=xterm-256color tmux"
-alias ack="ack-5.12" 
-
 alias autoactivate="auto_activate"
 alias aa="autoactivate"
 
@@ -61,6 +65,4 @@ alias fact="elinks -dump http://randomfunfacts.com  | sed -n '/^| /p' | tr -d \|
 alias pipr="pip install -r requirements.txt --upgrade"
 
 export FPATH="$FPATH:/opt/local/share/zsh/site-functions/"
-if [ -f /opt/local/etc/profile.d/autojump.sh ]; then
-      . /opt/local/etc/profile.d/autojump.sh
-    fi
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
