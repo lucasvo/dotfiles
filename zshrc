@@ -53,8 +53,15 @@ setopt nomatch
 
 }
 
-
 alias tmux="TERM=xterm-256color tmux"
+
+function imux {
+    tmux ls
+    read "session?Session: "
+    tmux attach -t $session
+  }
+
+alias t=imux
 alias autoactivate="auto_activate"
 alias aa="autoactivate"
 
