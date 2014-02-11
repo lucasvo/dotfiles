@@ -82,6 +82,7 @@ if has("autocmd")
 
   " Enable soft-wrapping for text files
   autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
+  autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx

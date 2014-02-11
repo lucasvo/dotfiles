@@ -8,7 +8,7 @@ DISABLE_LS_COLORS="true"
 
 plugins=(git github bundler brew gem rbates django osx pip cake)
 
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/Users/lucasvo/Code/taulia/gradle-1.8/bin:$PATH"
 
 # added by Anaconda 1.6.1 installer
 export PATH="/Users/lucasvo/anaconda/bin:$PATH"
@@ -66,10 +66,17 @@ alias autoactivate="auto_activate"
 alias aa="autoactivate"
 
 alias gc="git commit -m"
-
-alias fact="elinks -dump http://randomfunfacts.com  | sed -n '/^| /p' | tr -d \|"
+alias mysql=/usr/local/mysql/bin/mysql
+alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
 alias pipr="pip install -r requirements.txt --upgrade"
 
+
+export JAVA_OPTS="$JAVA_OPTS -XX:MaxPermSize=512m -Xmx1536M -server -Dorg.terracotta.quartz.skipUpdateCheck=true"
+export GRADLE_OPTS="-Dorg.gradle.daemon=true -Xmx1024m -Xms512m -XX:MaxPermSize=512m"
+
 export FPATH="$FPATH:/opt/local/share/zsh/site-functions/"
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/lucasvo/.gvm/bin/gvm-init.sh" ]] && source "/Users/lucasvo/.gvm/bin/gvm-init.sh"
